@@ -1,0 +1,623 @@
+```css
+/* =========================================
+   GRADUATION WEBSITE - TEH SARAH
+   Style CSS
+========================================= */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at top left, rgba(255, 105, 180, 0.35), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(180, 80, 255, 0.35), transparent 35%),
+        linear-gradient(135deg, #16001f, #3b063d, #16001f);
+
+    color: white;
+    position: relative;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: min(90%, 720px);
+    max-height: 90vh;
+
+    padding: 45px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 50px rgba(255, 80, 180, 0.15);
+
+    position: relative;
+    z-index: 10;
+
+    animation: containerAppear 1.5s ease forwards;
+}
+
+/* =========================================
+   GRADUATION ICON
+========================================= */
+
+.graduation-icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+
+    animation: graduationFloat 3s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.7))
+        drop-shadow(0 0 25px rgba(255, 100, 200, 0.6));
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+
+    margin-bottom: 18px;
+
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #ffb6e6,
+        #ffffff
+    );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        titleAppear 1.4s ease forwards,
+        shine 4s linear infinite;
+
+    text-shadow: 0 0 30px rgba(255, 150, 220, 0.3);
+}
+
+/* =========================================
+   SUB TITLE
+========================================= */
+
+h2 {
+    font-size: clamp(1.15rem, 3vw, 1.7rem);
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+
+    color: #ffe4f5;
+
+    animation: fadeUp 1.7s ease forwards;
+}
+
+/* =========================================
+   NAME
+========================================= */
+
+h3 {
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    animation: nameAppear 2s ease forwards;
+
+    text-shadow:
+        0 0 10px rgba(255, 150, 220, 0.7),
+        0 0 25px rgba(255, 100, 200, 0.4);
+}
+
+h3 span {
+    display: inline-block;
+
+    animation: heartbeat 1.3s infinite;
+
+    filter: drop-shadow(0 0 10px #ff69b4);
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+    font-size: 1.3rem;
+
+    margin: 12px 0 25px;
+
+    letter-spacing: 8px;
+
+    animation: dividerAppear 2.2s ease forwards;
+}
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+
+    line-height: 1.8;
+
+    color: #fff5fb;
+
+    margin-bottom: 12px;
+
+    animation: fadeUp 2.4s ease forwards;
+}
+
+.message strong {
+    font-weight: 500;
+}
+
+.english {
+    margin-top: 18px;
+
+    color: #ffd5ef;
+
+    font-style: italic;
+
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+    margin-top: 22px;
+
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    background: linear-gradient(
+        135deg,
+        #ff4fa3,
+        #c44cff
+    );
+
+    box-shadow:
+        0 8px 25px rgba(255, 70, 170, 0.35),
+        0 0 25px rgba(196, 76, 255, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: buttonAppear 2.7s ease forwards;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 12px 35px rgba(255, 70, 170, 0.55),
+        0 0 35px rgba(196, 76, 255, 0.4);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* =========================================
+   CELEBRATION MESSAGE
+========================================= */
+
+.celebration {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    margin-top: 0;
+
+    font-size: 1.15rem;
+    line-height: 1.7;
+
+    color: #fff;
+
+    transition:
+        max-height 1s ease,
+        opacity 1s ease,
+        margin-top 1s ease;
+}
+
+.celebration.show {
+    max-height: 200px;
+    opacity: 1;
+
+    margin-top: 25px;
+
+    animation: celebrationGlow 1.5s ease-in-out infinite alternate;
+}
+
+.celebration span {
+    color: #ffd3ec;
+}
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+
+    bottom: -60px;
+
+    color: #ff69b4;
+
+    font-size: 25px;
+
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 0 6px rgba(255, 105, 180, 0.8))
+        drop-shadow(0 0 15px rgba(255, 105, 180, 0.4));
+
+    animation: heartFloat linear forwards;
+}
+
+/* =========================================
+   STARS / SPARKLES
+========================================= */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.star {
+    position: absolute;
+
+    color: white;
+
+    font-size: 12px;
+
+    opacity: 0;
+
+    animation: sparkle ease-in-out infinite;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes containerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes titleAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes nameAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes graduationFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.25);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.2);
+    }
+
+    60%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes dividerAppear {
+    from {
+        opacity: 0;
+        letter-spacing: 0;
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: 8px;
+    }
+}
+
+@keyframes celebrationGlow {
+    from {
+        text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.4);
+    }
+
+    to {
+        text-shadow:
+            0 0 15px rgba(255, 120, 200, 0.9),
+            0 0 30px rgba(255, 120, 200, 0.5);
+    }
+}
+
+/* Floating Heart Animation */
+
+@keyframes heartFloat {
+    0% {
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0deg)
+            scale(0.7);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    50% {
+        transform:
+            translateY(-50vh)
+            translateX(40px)
+            rotate(15deg)
+            scale(1);
+    }
+
+    100% {
+        transform:
+            translateY(-115vh)
+            translateX(-50px)
+            rotate(-15deg)
+            scale(1.3);
+
+        opacity: 0;
+    }
+}
+
+/* Sparkle */
+
+@keyframes sparkle {
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.4) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4) rotate(180deg);
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 92%;
+
+        padding: 30px 20px;
+
+        border-radius: 24px;
+
+        max-height: none;
+    }
+
+    .graduation-icon {
+        font-size: 55px;
+    }
+
+    h1 {
+        font-size: 2rem;
+
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .message {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+    button {
+        width: 100%;
+
+        padding: 14px 18px;
+
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================================
+   VERY SMALL SCREEN
+========================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding: 25px 16px;
+    }
+
+    .graduation-icon {
+        font-size: 48px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.55rem;
+    }
+
+    .message {
+        font-size: 0.9rem;
+    }
+}
+
+/* =========================================
+   REDUCE MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+```
