@@ -1,0 +1,79 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Congratulations Teh Sarah 🎓❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="hearts"></div>
+    <div class="stars"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="graduation-icon">🎓</div>
+
+        <h1>🎓 Congratulations! 🎓</h1>
+
+        <h2>
+            Congratulation on Your Graduation
+        </h2>
+
+        <h3>
+            Teh Sarah <span>❤️</span>
+        </h3>
+
+        <div class="divider">✨ ❤️ ✨</div>
+
+        <p class="message">
+            <strong>Selamat atas kelulusanmu, Teh Sarah Juhairiyah.</strong>
+        </p>
+
+        <p class="message">
+            <strong>
+                Semoga ilmu yang telah diperoleh menjadi bekal
+                untuk meraih masa depan yang lebih indah.
+            </strong>
+        </p>
+
+        <p class="message">
+            <strong>
+                Teruslah melangkah, bermimpi, dan wujudkan
+                semua cita-citamu.
+            </strong>
+        </p>
+
+        <p class="message english">
+            <strong>
+                This is the beginning of a beautiful new journey. ❤️
+            </strong>
+        </p>
+
+        <!-- Button -->
+        <button id="celebrateButton">
+            Open My Congratulations ❤️
+        </button>
+
+        <!-- Celebration Message -->
+        <div id="celebration" class="celebration">
+            🎉 Selamat atas pencapaianmu, Teh Sarah! 🎉
+            <br>
+            <span>Keep shining and keep chasing your dreams! ❤️</span>
+        </div>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
